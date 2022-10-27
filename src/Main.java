@@ -20,7 +20,7 @@ public class Main {
         int answ = sum1.getSum() + sum2.getSum();
         long endTimeThreaded = System.nanoTime();
         System.out.println("Sum is: " + answ);
-        System.out.println("Took " + TimeUnit.SECONDS.convert(endTimeThreaded - startTimeThreaded, TimeUnit.NANOSECONDS) + " seconds.");
+        System.out.println("Threaded sum took " + TimeUnit.SECONDS.convert(endTimeThreaded - startTimeThreaded, TimeUnit.NANOSECONDS) + " seconds.");
         long startTime = System.nanoTime();
         NonThreadedArray nonThreadedArray = new NonThreadedArray(200000000);
         nonThreadedArray.makeArray();
@@ -29,7 +29,7 @@ public class Main {
         answ = sum.getSum();
         long endTime = System.nanoTime();
         System.out.println("Sum is: " + answ);
-        System.out.println("Took " + TimeUnit.SECONDS.convert(endTime - startTime, TimeUnit.NANOSECONDS) + " seconds.");
+        System.out.println("Non-threaded sum Took " + TimeUnit.SECONDS.convert(endTime - startTime, TimeUnit.NANOSECONDS) + " seconds.");
 
 
 

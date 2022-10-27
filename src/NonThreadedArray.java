@@ -5,14 +5,12 @@ public class NonThreadedArray {
     int userSize = 0;
     int[] completedArray;
 
-    public NonThreadedArray(int userSize) {
-        this.userSize = userSize;
-        completedArray = new int[userSize];
+    public NonThreadedArray(int size) {
+        completedArray = new int[size];
     }
 
     public void makeArray() {
-
-        for (int i = 0; i < SIZE; i++) {
+        for (int i = 0; i < completedArray.length; i++) {
             completedArray[i] = (int)((Math.random() * ((MAX - MIN+1)+MIN)));
         }
 
